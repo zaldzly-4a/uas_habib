@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .header {
+    background-color: #F90707;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1s ease-in;
+  }
+  .header img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: bounce 2s infinite alternate;
+  }
+  .header h1 {
+    margin: 10px 0 5px;
+    font-size: 24px;
+  }
+  .header p {
+    margin: 0;
+    font-size: 16px;
+  }
+  .navbar {
+    background-color: #22EFAE;
+    overflow: hidden;
+  }
+  .navbar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  .navbar a:hover {
+    background-color: #22EFAE;
+  }
+  .content {
+    background-color: #4e4e4e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  .content img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+  }
+  .content h2 {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+  .projects {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .project {
+    background-color: #F90707;
+    color: black;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+  .project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+  }
+  .contact {
+    background-color: #F90707;
+    padding: 20px;
+    text-align: center; 
+  }
+  .contact h2 {
+    font-size: 24px; 
+    margin-bottom: 20px; 
+  }
+  .contact p { 
+      margin: 5px 0; 
+      animation: slideInUp 1s ease-in; 
+      opacity: 0; 
+      animation-fill-mode: forwards; 
+      animation-delay: var(--i); /* Custom delay for each paragraph */
+      --i : calc(var(--n) * var(--delay)); /* Dynamic delay */
+   }
+
+   /* Animation Keyframes */
+   @keyframes fadeIn {
+     from { opacity: 0; }
+     to { opacity: 1; }
+   }
+
+   @keyframes bounce {
+     from { transform: translateY(0); }
+     to { transform: translateY(-10px); }
+   }
+
+   @keyframes slideInUp {
+     from { transform: translateY(20px); opacity :0;}
+     to { transform :translateY(0); opacity :1;}
+   }
+
+   /* Media Queries */
+   @media (max-width: 600px) {
+     .projects {
+       flex-direction : column; 
+       align-items : center; 
+     } 
+   } 
